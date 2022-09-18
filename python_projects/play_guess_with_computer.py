@@ -1,6 +1,10 @@
 # idea for this came from from a youtube video: https://www.youtube.com/watch?v=8ext9G7xspg
 # I tried to replicate the functionality, but didn't follow the tutorial
 # I split everything up into separate functions and call them as needed, this seemed like a good way of doing it
+
+# some user behaviour that causes an error:
+# when prompted hitting enter without making a selection twice cause an error
+# when answering the prompts in such a way that when doing random.randint() the upper limit is lower that the lower limit, causes error
 import random
 
 
