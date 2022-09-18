@@ -11,10 +11,19 @@ playAgain = "y"
 lowerLimit = 1
 upperLimit = 1000
 
+
+
 def computerGuesses(lowerLimit, upperLimit):
     guess = random.randint(lowerLimit, upperLimit)
-    reponse = input(f"Is {guess} your number (y), or is that too high (h), or too low (l)?\n(Press 'y' for yes, 'l' for low, or 'h' for high")
-    if 
+    response = input(f"Is {guess} your number (y), or is that too high (h), or too low (l)?\n(Press 'y' for yes, 'l' for low, or 'h' for high")
+    if response == "y":
+        computerWon()
+    if response == "h":
+        computerGuesses(lowerLimit, upperLimit-1)
+    if response == "l":
+        computerGuesses(lowerLimit+1, upperLimit)
+    else:
+        response = input(f"Is {guess} your number (y), or is that too high (h), or too low (l)?\n(Press 'y' for yes, 'l' for low, or 'h' for high")      
     
 def computerWon():
     print("Computer won!")
