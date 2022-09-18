@@ -1,9 +1,10 @@
-from ast import Num
-import numbers
+# idea for this came from from a youtube video: https://www.youtube.com/watch?v=8ext9G7xspg
+# I tried to replicate the functionality, but didn't follow the tutorial
+# I split everything up into separate functions and call them as needed, this seemed like a good way of doing it
 import random
-from tokenize import Number
 
-print("Hello, let's play a game. \nYou choose a number, and the computer will tru to guess it.")
+
+print("Hello, let's play a game. \nYou choose a number, and the computer will try to guess it.")
 input("Press 'enter' when ready")
 print("Great!")
 
