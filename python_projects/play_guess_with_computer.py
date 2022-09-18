@@ -19,7 +19,7 @@ def evaluateAnswers(response, guess, lowerLimit, upperLimit):
         computerGuesses(lowerLimit, guess-1)
     if response == "l":
         computerGuesses(guess+1, upperLimit)
-    else:
+    if response != "y":
         print("Please answer with 'y', 'h' or 'l'.")
         evaluateAnswers(askForResponse(guess), guess)
 
@@ -34,7 +34,7 @@ def computerWon():
     playAgain = askToPlay()
     if playAgain == "y":
         print("Let's go!")
-        computerGuesses(1, 100)
+        computerGuesses(1, 1000)
     else:
         print("Thanks for playing, see you next time.")
 
@@ -43,4 +43,4 @@ def askToPlay():
     yesOrNo = input("Hit 'y'and then 'enter' to play again, or any other key + 'enter' to quit")
     return yesOrNo
 
-computerGuesses(1, 100)
+computerGuesses(1, 1000)
