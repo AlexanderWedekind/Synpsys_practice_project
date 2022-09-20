@@ -21,9 +21,13 @@ def evaluateAnswers(response, guess, lowerLimit, upperLimit):
     if response == "y":
         computerWon()
     if response == "h":
-        computerGuesses(lowerLimit, guess-1)
+        if guess - 1 >= lowerLimit:
+            computerGuesses(lowerLimit, guess-1)
+        else: computerGuesses(lowerLimit, upperLimit)
     if response == "l":
-        computerGuesses(guess+1, upperLimit)
+        if guess + 1 <= upperLimit:
+            computerGuesses(guess+1, upperLimit)
+        else: computerGuesses(lowerLimit, upperLimit)
     if response != "y":
         print("Please answer with 'y', 'h' or 'l'.")
         evaluateAnswers(askForResponse(guess), guess)
